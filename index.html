@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CleanHub</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">CLEANHUB</div>
+
+  <div class="search-wrap">
+    <input type="text" placeholder="Search games or apps..." />
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+  </div>
+</header>
+
+<section class="tabs">
+  <button class="tab active" data-type="games">Games</button>
+  <button class="tab" data-type="apps">Apps</button>
+</section>
+
+<!-- TOP -->
+<section class="hero">
+  <div class="featured">
+    <span class="badge">FEATURED</span>
+    <h2>Featured Game / App</h2>
+    <p>Optimized · Latest Version · Clean Info</p>
+  </div>
+
+  <div class="trending-row" id="trending"></div>
+</section>
+
+<!-- BOTTOM -->
+<section class="latest">
+  <h3>Latest Posts</h3>
+  <div class="latest-grid" id="latest"></div>
+</section>
+
+<footer>
+  <a href="#">Disclaimer</a>
+  <a href="#">Privacy</a>
+  <a href="#">Terms</a>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
