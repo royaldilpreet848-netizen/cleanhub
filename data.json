@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "id": "game-001",
+      "type": "game",
+      "title": "GTA V",
+      "description": "Open-world action adventure game.",
+      "thumbnail": "assets/images/gta-v.jpg",
+      "platform": "Windows",
+      "tags": ["open-world", "action"],
+      "versions": [
+        {
+          "version": "v1.0",
+          "size": "20GB",
+          "notes": "Stable release"
+        },
+        {
+          "version": "v1.1",
+          "size": "22GB",
+          "notes": "Latest update"
+        }
+      ],
+      "external_links": [
+        {
+          "label": "Official Site",
+          "url": "https://example.com"
+        }
+      ],
+      "created_at": "2025-01-01"
+    },
+
+    {
+      "id": "app-001",
+      "type": "app",
+      "title": "Photoshop",
+      "description": "Professional photo editing software.",
+      "thumbnail": "assets/images/photoshop.jpg",
+      "platform": "Windows",
+      "tags": ["design", "photo"],
+      "versions": [
+        {
+          "version": "2023",
+          "size": "2GB",
+          "notes": "Latest version"
+        }
+      ],
+      "external_links": [
+        {
+          "label": "Official Site",
+          "url": "https://example.com"
+        }
+      ],
+      "created_at": "2025-01-02"
+    }
+  ]
+}
