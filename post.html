@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Details – CleanHub</title>
+
+  <meta name="description" content="View detailed information including versions, system requirements, and external links.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+
+<body>
+
+<header class="topbar" role="banner">
+  <div class="logo">CLEANHUB</div>
+</header>
+
+<!-- HERO -->
+<section class="post-hero">
+  <h1 id="title"></h1>
+  <p id="meta"></p>
+</section>
+
+<!-- CONTENT -->
+<section class="post-content single">
+
+  <!-- MAIN DETAILS -->
+  <div class="post-main">
+    <p id="description"></p>
+
+    <h3>System Requirements</h3>
+    <ul id="requirements"></ul>
+
+    <h3>Available Versions</h3>
+    <ul id="versions"></ul>
+
+    <a id="downloadLink" class="download-btn" target="_blank">
+      External Download
+    </a>
+  </div>
+
+  <!-- RELATED -->
+  <h3 style="margin-top:32px;">Related</h3>
+  <div class="latest-grid" id="related"></div>
+
+</section>
+
+<footer>
+  <a href="#">Disclaimer</a>
+  <a href="#">Privacy</a>
+  <a href="#">Terms</a>
+</footer>
+
+<script>
+fetch("data/database.json")
+  .then(res => res.json())
+  .then(json => {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    const items = json.items || [];
+    const item = items.find(i => i.id === id);
+    if (!item) return;
+
+    // BASIC INFO
+    document.getElementById("title").innerText = item.title;
+    document.getElementById("meta").innerText =
+      `${item.platform} · ${item.type.toUpperCase()}`;
+
+    document.getElementById("description").innerText = item.description;
+
+    // REQUIREMENTS
+    const req = document.getElementById("requirements");
+    const min = item.system_requirements.minimum;
+    const rec = item.system_requirements.recommended;
+
+    req.innerHTML = `
+      <li><strong>Minimum:</strong> ${min.os}, ${min.ram} RAM, ${min.gpu}, ${min.storage}</li>
+      <li><strong>Recommended:</strong> ${rec.os}, ${rec.ram} RAM, ${rec.gpu}, ${rec.storage}</li>
+    `;
+
+    // VERSIONS
+    const versions = document.getElementById("versions");
+    versions.innerHTML = "";
+    item.versions.forEach(v => {
+      versions.innerHTML += `<li>${v.version} — ${v.size} (${v.notes})</li>`;
+    });
+
+    // LINK
+    const link = document.getElementById("downloadLink");
+    link.href = item.external_links[0].url;
+    link.innerText = item.external_links[0].label;
+
+    // RELATED
+    const related = document.getElementById("related");
+    related.innerHTML = "";
+
+    items
+      .filter(i => i.type === item.type && i.id !== item.id)
+      .slice(0, 4)
+      .forEach(rel => {
+        const card = document.createElement("div");
+        card.className = "latest-card";
+        card.innerHTML = `
+          <div class="thumb"></div>
+          <div class="meta">
+            <strong>${rel.title}</strong><br>
+            <small>${rel.platform}</small>
+          </div>
+        `;
+        card.onclick = () => {
+          window.location.href = `post.html?id=${rel.id}`;
+        };
+        related.appendChild(card);
+      });
+  })
+  .catch(err => console.error("Post page load failed", err));
+</script>
+
+</body>
+</html>

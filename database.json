@@ -1,0 +1,134 @@
+{
+  "items": [
+    {
+      "id": "game-gta-v",
+      "type": "game",
+      "title": "GTA V",
+      "description": "Open-world action adventure game set in Los Santos.",
+      "thumbnail": "assets/images/gta-v.jpg",
+      "platform": "Windows",
+      "tags": ["open-world", "action", "rockstar"],
+
+      "system_requirements": {
+        "minimum": {
+          "os": "Windows 10",
+          "ram": "8 GB",
+          "gpu": "GTX 660",
+          "storage": "20 GB"
+        },
+        "recommended": {
+          "os": "Windows 10",
+          "ram": "16 GB",
+          "gpu": "GTX 1060",
+          "storage": "25 GB"
+        }
+      },
+
+      "versions": [
+        {
+          "version": "v1.0",
+          "size": "20 GB",
+          "notes": "Stable release"
+        },
+        {
+          "version": "v1.1",
+          "size": "22 GB",
+          "notes": "Latest update"
+        }
+      ],
+
+      "external_links": [
+        {
+          "label": "Official Website",
+          "url": "https://www.rockstargames.com"
+        }
+      ],
+
+      "created_at": "2025-01-01"
+    },
+
+    {
+      "id": "game-cyberpunk-2077",
+      "type": "game",
+      "title": "Cyberpunk 2077",
+      "description": "Futuristic open-world RPG set in Night City.",
+      "thumbnail": "assets/images/cyberpunk.jpg",
+      "platform": "Windows",
+      "tags": ["rpg", "open-world", "futuristic"],
+
+      "system_requirements": {
+        "minimum": {
+          "os": "Windows 10",
+          "ram": "8 GB",
+          "gpu": "GTX 970",
+          "storage": "70 GB"
+        },
+        "recommended": {
+          "os": "Windows 11",
+          "ram": "16 GB",
+          "gpu": "RTX 2060",
+          "storage": "80 GB"
+        }
+      },
+
+      "versions": [
+        {
+          "version": "v2.0",
+          "size": "70 GB",
+          "notes": "Latest stable"
+        }
+      ],
+
+      "external_links": [
+        {
+          "label": "Official Website",
+          "url": "https://www.cyberpunk.net"
+        }
+      ],
+
+      "created_at": "2025-01-05"
+    },
+
+    {
+      "id": "app-photoshop",
+      "type": "app",
+      "title": "Adobe Photoshop",
+      "description": "Professional photo editing software.",
+      "thumbnail": "assets/images/photoshop.jpg",
+      "platform": "Windows",
+      "tags": ["design", "photo", "editing"],
+
+      "system_requirements": {
+        "minimum": {
+          "os": "Windows 10",
+          "ram": "8 GB",
+          "gpu": "Integrated",
+          "storage": "2 GB"
+        },
+        "recommended": {
+          "os": "Windows 11",
+          "ram": "16 GB",
+          "gpu": "Dedicated GPU",
+          "storage": "4 GB"
+        }
+      },
+
+      "versions": [
+        {
+          "version": "2023",
+          "size": "2 GB",
+          "notes": "Latest version"
+        }
+      ],
+
+      "external_links": [
+        {
+          "label": "Official Website",
+          "url": "https://www.adobe.com"
+        }
+      ],
+
+      "created_at": "2025-01-10"
+    }
+  ]
+}

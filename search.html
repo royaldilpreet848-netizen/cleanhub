@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Search – CleanHub</title>
+
+  <meta name="description" content="Search games and apps on CleanHub. Filter by category and find detailed information quickly.">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="topbar" role="banner">
+  <div class="logo">CLEANHUB</div>
+
+  <div class="search-wrap">
+   <input
+  id="searchInput"
+  type="text"
+  placeholder="Search games or apps..."
+  aria-label="Search games or apps"
+/>
+
+    <button
+  id="themeToggle"
+  class="theme-toggle"
+  aria-label="Toggle dark or light mode"
+>
+  🌙
+</button>
+
+  </div>
+</header>
+
+<section class="tabs">
+  <button class="tab active" data-type="games">Games</button>
+  <button class="tab" data-type="apps">Apps</button>
+</section>
+
+<section class="latest">
+  <h3 id="resultTitle">Search Results</h3>
+  <div class="latest-grid" id="results"></div>
+</section>
+
+<footer>
+  <a href="#">Disclaimer</a>
+  <a href="#">Privacy</a>
+  <a href="#">Terms</a>
+</footer>
+
+<script src="assets/js/search.js"></script>
+</body>
+</html>

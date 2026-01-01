@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: #0b1220;
+  color: #fff;
+}
+
+/* HEADER */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 32px;
+  background: linear-gradient(135deg, #020617, #111827);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.search-wrap {
+  display: flex;
+  gap: 12px;
+}
+
+.search-wrap input {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  width: 260px;
+}
+
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 10px;
+  padding: 16px 32px;
+  background: #020617;
+}
+
+.tab {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  background: #1f2937;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 24px;
+  padding: 32px;
+}
+
+/* FEATURED */
+.featured {
+  background: linear-gradient(180deg, #020617, #020617cc);
+  border-radius: 18px;
+  padding: 22px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.badge {
+  background: #2563eb;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  width: fit-content;
+  margin-bottom: 8px;
+}
+
+/* 🔵 TRENDING — SINGLE ROW */
+.trending-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.trending-row::-webkit-scrollbar {
+  height: 6px;
+}
+
+.trending-row::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 7px;
+}
+
+.trend-card {
+  min-width: 240px;
+  height: 290px;
+  background: #111827;
+  border-radius: 18px;
+  padding: 16px;
+  display: flex;
+  align-items: flex-end;
+  transition: transform .2s;
+  flex-shrink: 0;
+}
+
+.trend-card:hover {
+  transform: translateY(-6px);
+}
+
+/* 🟢 LATEST — BIG GRID */
+.latest {
+  background: #f9fafb;
+  color: #000;
+  padding: 32px;
+}
+
+.latest h3 {
+  margin-bottom: 18px;
+}
+
+.latest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.latest-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 18px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  min-height: 140px;
+  transition: transform .2s;
+}
+
+.latest-card:hover {
+  transform: translateY(-6px);
+}
+
+.thumb {
+  width: 70px;
+  height: 70px;
+  background: #e5e7eb;
+  border-radius: 14px;
+}
+
+.meta small {
+  color: #6b7280;
+}
+
+/* FOOTER */
+footer {
+  background: #ffffff;
+  color: #000;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #444;
+}
+
+/* POST PAGE */
+.post-hero {
+  padding: 40px 32px;
+  background: linear-gradient(135deg, #020617, #111827);
+}
+
+.post-hero h1 {
+  font-size: 32px;
+}
+
+.post-hero p {
+  color: #9ca3af;
+  margin-top: 6px;
+}
+
+.post-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  padding: 32px;
+  background: #f9fafb;
+  color: #000;
+}
+
+.post-main {
+  background: #fff;
+  padding: 24px;
+  border-radius: 18px;
+}
+
+.post-main ul {
+  margin-left: 18px;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 20px;
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 14px;
+}
+
+/*.ai-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.ai-box input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+.ai-box button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  background: #111827;
+  color: #fff;
+  cursor: pointer;
+} */
+
+/* THEME TOGGLE */
+.theme-toggle {
+  background: #1f2937;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background: #374151;
+}
+
+/* LIGHT MODE */
+body.light {
+  background: #f3f4f6;
+  color: #000;
+}
+
+body.light .topbar,
+body.light .tabs {
+  background: #ffffff;
+}
+
+body.light .tab {
+  background: #e5e7eb;
+  color: #000;
+}
+
+body.light .tab.active {
+  background: #2563eb;
+  color: #fff;
+}
+
+body.light .featured,
+body.light .trend-card {
+  background: #ffffff;
+  color: #000;
+}
+
+body.light .latest {
+  background: #f9fafb;
+}
+
+/* ===== GLOBAL TRANSITIONS ===== */
+* {
+  transition: background-color .25s ease,
+              color .25s ease,
+              transform .25s ease,
+              box-shadow .25s ease;
+}
+
+/* ===== CARD HOVER EFFECTS ===== */
+.trend-card,
+.latest-card,
+.featured {
+  cursor: pointer;
+}
+
+.trend-card:hover,
+.latest-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* ===== BUTTON PRESS FEEL ===== */
+button:active {
+  transform: scale(0.96);
+}
+
+/* ===== SEARCH INPUT FOCUS ===== */
+.search-wrap input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #2563eb55;
+}
+
+/* ===== FADE-IN ANIMATION ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero,
+.latest,
+.post-hero,
+.post-content {
+  animation: fadeUp .6s ease both;
+}
+
+/* ===== SCROLLBAR (CLEAN) ===== */
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 10px;
+}
+
+/* ===== LIGHT MODE POLISH ===== */
+body.light .trend-card:hover,
+body.light .latest-card:hover {
+  box-shadow: 0 16px 32px rgba(0,0,0,0.15);
+}
+
+/* POST PAGE WITHOUT AI */
+.post-content.single {
+  grid-template-columns: 1fr;
+}
+
+/* RELATED SECTION */
+#related {
+  margin-top: 20px;
+}
+
+.latest-grid {
+  will-change: transform;
+}
+
+/* ACCESSIBILITY: FOCUS */
+:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+button, a, input {
+  outline: none;
+}
+
+/* ACCESSIBILITY: KEYBOARD FOCUS */
+:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+button,
+a,
+input {
+  outline: none;
+}
+
+/* LIGHT MODE SMALL TEXT FIX */
+body.light .meta small {
+  color: #374151;
+}
